@@ -1,0 +1,87 @@
+name: 🎮 Submit a MakeCode Project
+description: Upload your MakeCode Arcade .png cartridge or share link for ECA Coding & AI
+title: "[Project] "
+labels: ["student-project"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🕹️ ECA Coding & AI — Project Submission
+        Use this form to share or back up your [MakeCode Arcade](https://arcade.makecode.com) project!
+        **Privacy reminder:** Use your team code name / slug (like `blue-otter` or `rocket-7`) or first name + last initial only. Do **not** post full last names or personal information.
+
+  - type: input
+    id: student_slug
+    attributes:
+      label: Team or Student Code Name (Slug)
+      description: "Example: `blue-otter`, `mango-lab`, `rocket-7`"
+      placeholder: "blue-otter"
+    validations:
+      required: true
+
+  - type: input
+    id: game_title
+    attributes:
+      label: Game Title
+      description: What is your game called?
+      placeholder: "Star Dodger"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: week
+    attributes:
+      label: Week / Unit
+      options:
+        - "General / Any Week"
+        - "Week 1 — Launch Day"
+        - "Week 2 — Sequence & Events"
+        - "Week 3 — Loops"
+        - "Week 4 — Variables & Score"
+        - "Week 5 — Conditionals"
+        - "Week 6 — Sprites & Collisions"
+        - "Week 7 — Build Your Own (Prototype)"
+        - "Week 8 — Playtest & Share (Shipped Game)"
+        - "Week 17 — Hour of Code"
+        - "Unit 3 — MakeCode Python"
+    validations:
+      required: true
+
+  - type: input
+    id: share_link
+    attributes:
+      label: MakeCode Share Link (Optional)
+      description: "In MakeCode Arcade, click **Share → Publish project → Copy** and paste the URL here."
+      placeholder: "https://arcade.makecode.com/S..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: cartridge_upload
+    attributes:
+      label: Upload MakeCode .png Cartridge File
+      description: "Click the 💾 Save button at the bottom of MakeCode Arcade to download your `.png` project cartridge, then **drag and drop that `.png` file into the box below**."
+      placeholder: "Drag and drop your arcade-*.png file here!"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: concepts
+    attributes:
+      label: Which coding concepts did you use?
+      options:
+        - label: Events (button press, on start)
+        - label: Loops (repeat, forever, on game update)
+        - label: Variables (score, lives, custom variables)
+        - label: Conditionals (if / else rules)
+        - label: Sprites & Collisions (on sprite overlaps)
+        - label: JavaScript or Python text mode
+
+  - type: textarea
+    id: description
+    attributes:
+      label: About Your Game (Player + Goal + Challenge + Feedback)
+      description: "In 1–2 sentences, tell us how to play or what one improvement you made after playtesting!"
+      placeholder: "I move a spaceship, collect stars, and avoid asteroids. After playtesting, I made the enemy sprites a different color."
+    validations:
+      required: false
